@@ -1,0 +1,9 @@
+/* add css module styles here (optional) */
+
+div.star-sky-wrapper {
+  z-index: -3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
