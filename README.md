@@ -37,6 +37,14 @@ class Example extends Component {
 />
 ```
 
+## Potential Future Features
+- Nebulas
+- Planets
+- Falling Stars
+- Galaxies
+- Star Constellations
+- Star Shuffling Mechanic (position change over time)
+
 ## License
 
 MIT © [ZJVieth](https://github.com/ZJVieth)
