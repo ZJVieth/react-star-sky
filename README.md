@@ -25,6 +25,18 @@ class Example extends Component {
 }
 ```
 
+## Optional Properties
+```jsx
+<StarSky 
+  debugFps={true}   // Default = false
+  frameRate={30}    // Default = 60
+  style={{opacity: 0.5}}  // applied to the div wrapper
+  className={''}  // applied to the div wrapper
+  starColor={'rainbow'} // Default = 'white', options: 'rainbow', 'white/red/green/etc'[w3color], [r, g, b]
+  skyColor={[20, 20, 100]} // Default = 'black', options: 'white/red/green/etc'[w3color], [r, g, b]
+/>
+```
+
 ## License
 
 MIT © [ZJVieth](https://github.com/ZJVieth)
