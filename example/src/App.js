@@ -6,17 +6,18 @@ const App = () => {
   return (
     <div className='app-wrapper'>
       <StarSky
-        debugFPS={true}
+        // debugFPS={true}
         pageBackground={true}
+        // shuffle={0}
         // starColor='white'
-        frameRate={60}
+        frameRate={30}
       />
 
       <StarSky
         debugFPS={false}
         pageBackground={false}
         starColor={[0, 0, 255]}
-        backgroundColor={[0, 0, 20]}
+        backgroundColor={[0, 0, 10]}
         style={{
           width: '300px',
           height: '300px',

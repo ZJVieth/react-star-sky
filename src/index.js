@@ -29,6 +29,7 @@ export default class StarSky extends Component {
 
     let colorProp
     let countProp
+    let shuffleProp
 
     let nebula
     let starSky
@@ -47,6 +48,7 @@ export default class StarSky extends Component {
 
       // countProp = this.props.starCount
       colorProp = this.props.starColor
+      shuffleProp = this.props.shuffle
 
       // nebula = new Nebula()
       starSky = new StarSky(this.props.starCount)
@@ -63,6 +65,7 @@ export default class StarSky extends Component {
 
       // nebula.render(this.state.alpha)
 
+      starSky.shuffle()
       starSky.render()
 
       if (this.props.debugFPS) {
@@ -92,6 +95,8 @@ export default class StarSky extends Component {
       constructor(count) {
         count = count || 250
         this.count = p.int(p.random(count - 0.05 * count, count + 0.05 * count))
+        this.shufflePerSecond = Math.floor((shuffleProp || 0) * this.count)
+        this.shuffleTimer = p.millis()
 
         this.rainbow = []
 
@@ -117,6 +122,19 @@ export default class StarSky extends Component {
             for (let i = 0; i < 3; i++)
               rbCol.push(parseInt(p.random(0, 256)))
             this.rainbow.push(rbCol)
+          }
+        }
+      }
+
+      shuffle() {
+        if (this.shufflePerSecond > 0) {
+          if (p.millis() > this.shuffleTimer + 1000 / this.shufflePerSecond) {
+            let starIndex = Math.floor(Math.random() * this.count)
+            this.x[starIndex] = p.random(0, p.width)
+            this.y[starIndex] = p.random(0, p.height)
+            this.brightness[starIndex] = p.random(0, 20)
+
+            this.shuffleTimer = p.millis()
           }
         }
       }
