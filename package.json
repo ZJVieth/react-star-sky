@@ -1,6 +1,6 @@
 {
   "name": "react-star-sky",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple, modifiable p5js based background element displaying a randomized and animated star sky.",
   "author": "ZJVieth",
   "license": "MIT",

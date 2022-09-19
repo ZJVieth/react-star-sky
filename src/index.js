@@ -79,7 +79,7 @@ export default class StarSky extends Component {
     p.resize = () => {
       p.resizeCanvas(this.canvasRef.current.offsetWidth, this.canvasRef.current.offsetHeight)
 
-      console.log('Resize', this.canvasRef.current.offsetWidth, this.canvasRef.current.offsetHeight)
+      // console.log('Resize', this.canvasRef.current.offsetWidth, this.canvasRef.current.offsetHeight)
 
       p.starSky = null
       p.starSky = new StarSky(this.props.starCount)
@@ -107,7 +107,7 @@ export default class StarSky extends Component {
         this.brightnessIncrement = []
         this.size = []
 
-        console.log('To', p.width, p.height)
+        // console.log('To', p.width, p.height)
 
         for (let i = 0; i < this.count; i++) {
           this.brightness.push(p.int(p.random(0, 255)))
