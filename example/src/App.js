@@ -7,7 +7,7 @@ const App = () => {
     <div className='app-wrapper'>
       <StarSky
         // debugFPS={true}
-        pageBackground={true}
+        isPageBackground={true}
         // shuffle={0}
         // starColor='white'
         frameRate={30}
@@ -15,7 +15,7 @@ const App = () => {
 
       <StarSky
         debugFPS={false}
-        pageBackground={false}
+        // isPageBackground={false}
         starColor={[0, 0, 255]}
         backgroundColor={[0, 0, 10]}
         style={{
@@ -29,8 +29,12 @@ const App = () => {
         }}
       >
         <h2>Example Star Skies</h2>
-        You can easily place objects in front of the star sky. The star sky wrapper simply acts as div in which the canvas is contained as a background.<br />
-        For full documentation, see the readme on github.
+        <span>
+          You can easily place objects in front of the star sky. The star sky 
+          wrapper simply acts as div in which the canvas is contained as a background.
+          <br />
+          For full documentation, see the readme on github.
+        </span>
       </StarSky>
     </div>
   )
